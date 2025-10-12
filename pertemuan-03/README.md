@@ -11,4 +11,5 @@ Hari ini, kamis 09 oktober 2025, saya belajar:
 <li>membuat struktur form untuk section contact</li>
 <li>membuat styling untuk selector ID #about</li>
 <li>membuat styling untuk selector ID #about elemen h2</li>
+<li>membuat styling untuk selector ID #about elemen p</li>
 </ol>
