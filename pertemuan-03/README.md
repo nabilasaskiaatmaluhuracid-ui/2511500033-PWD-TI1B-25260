@@ -20,4 +20,5 @@ Hari ini, kamis 09 oktober 2025, saya belajar:
 <li>membuat section#contact upgrade struktur form</li>
 <li>membuat section#contact styling label</li>
 <li>membuat section#contact styling label>span</li>
+<li>membuat section#contact styling input dan textarea</li>
 </ol>
