@@ -12,4 +12,5 @@ Hari ini, kamis 23 Oktober 2025, saya mempelajari:
 <li>styling nav mobile</li>
 <li>styling nav menu mobile</li>
 <li>membuat script.js</li>
+<li>script tombol hamburger diklik</li>
 </ol>
