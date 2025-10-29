@@ -20,10 +20,10 @@ document.querySelector("form").addEventListener("submit, function (e) {
     let isValid = true;
 
     if (nama.Value.trim().length < 3) {
-        showError(nama, "Huy.");
+        showError(nama, "Nama minimal 3 huruf dan tidak boleh kosong.");
         isValid = false;
     }   else if (!/^[A-Za-z\s]+$/.test(nama.value)) {
-        showError(nama, "Huy777.");
+        showError(nama, "Nama hanya boleh berisi huruf dan spasi.");
         isValid = false;
     }
 
@@ -51,7 +51,7 @@ function showError(inputElement, message) {
     if (!label) return;
 
     label.style.flexWrap = "wrap";
-
+    
     const small = document.createElement("small");
     small.className = "error-msg";'
     small.textContent = message;
