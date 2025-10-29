@@ -1,13 +1,21 @@
 document.getElementById("menuToggle").addEventListener("click", function () {
-    document.querySelector("nav").classList.toggle("active");
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("active");
+    
+    if (nav.classList.contains("active")) {
+        this.textContent = "\u2716";
+    } else {
+        this.textContent = "\u2630";
+    }
+});
 
 document.querySelector("form").addEventListener("submit, function (e) {
-    const nama = document.getElementById("txtNama");
+    const nama = document.getElementById(txtNama");
     const email = document.getElementById("txtEmail");
     const pesan = document.getElementById("txtPesan");
 
     document.querySelectorAll(".error-msg").forEach(el => el.remove());
-    [nama,email, pesan].forEach(el => el.style.border = "");
+    [nama,email, pesan].forEach9el =>.style.border = "");
 
     let isValid = true;
 
@@ -22,7 +30,7 @@ document.querySelector("form").addEventListener("submit, function (e) {
     if (email.value.trim() === "") {
         showError(email, "Email wajib diisi.");
         isValid = false;
-    }   else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+    }else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
         showError(email, "Format email tidak valid. Contoh: nama@mail.com");
         isValid = false;
     }
@@ -41,9 +49,7 @@ document.querySelector("form").addEventListener("submit, function (e) {
 function showError(inputElement, message) {
     const label = inputElement.closest("label");
     if (!label) return;
-
     label.style.flexWrap = "wrap";
-    
     const small = document.createElement("small");
     small.className = "error-msg";'
     small.textContent = message;
@@ -59,30 +65,27 @@ function showError(inputElement, message) {
         label.insertBefore(small, inputElement.nextSibling);
     }   else {
         label.appendChild(small);
-    }
-    
-    inputElement.style.border "1px solid red";
-    
-    alignErrorMessage(small, inputElement);
-}
+    }inputElement.style.border
+
+"1px solid red";
+
+alignErrorMessage(small, inputElement);
 
 function alignErrorMessage(smaLLEL, inputEL) {
     const isMobile = window.matchMedia("(max-width: 600px)").matches;
     if (isMobile) {
-        smalLEL.style.marginLe .marginLeft = "0";
-        smalLEL.style.width = "100%";
+        smalLEL.style.marginLe .marginLeft = "0"; smalLEL.style.width = "100%";
         return;
     }
-    
+
     const label = inputEL.closest("label");
     if (!label) return;
-    
     const rectLabel = label.getBoundingClientRect();
     const rectInput = inputEl.getBoundingClientRect();
-    const offsetLeft = Math.max(0, Math.round(rectInput - leftrectLabel.left));
+    const offsetLeft = Math.max(0, Math.round(rectInput.left - rectLabel.left));
         
-    smaLLEL.style.marginLeft = offsetLeft + "px";
-    smaLLEL.style.width = Math.round(rectInput.width) + "px";
+        smaLLEL.style.marginLeft = offsetLeft + "px";
+        smaLLEL.style.width = Math.round(rectInput.width) + "px";
 }
 
 window.addEventListener("resize", () => {
