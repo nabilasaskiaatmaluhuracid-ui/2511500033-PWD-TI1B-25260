@@ -9,13 +9,13 @@ document.getElementById("menuToggle").addEventListener("click", function () {
     }
 });
 
-document.querySelector("form").addEventListener("submit, function (e) {
+document.querySelector("form").addEventListener("submit", function (e) {
     const nama = document.getElementById("txtNama");
     const email = document.getElementById("txtEmail");
     const pesan = document.getElementById("txtPesan");
 
     document.querySelectorAll(".error-msg").forEach(el => el.remove());
-    [nama,email, pesan].forEach9el => el.style.border = "");
+    [nama, email, pesan].forEach(el => el.style.border = "");
 
     let isValid = true;
 
@@ -30,7 +30,7 @@ document.querySelector("form").addEventListener("submit, function (e) {
     if (email.value.trim() === "") {
         showError(email, "Email wajib diisi.");
         isValid = false;
-    }else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+    }   else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
         showError(email, "Format email tidak valid. Contoh: nama@mail.com");
         isValid = false;
     }
@@ -49,12 +49,14 @@ document.querySelector("form").addEventListener("submit, function (e) {
 function showError(inputElement, message) {
     const label = inputElement.closest("label");
     if (!label) return;
+
     label.style.flexWrap = "wrap";
+
     const small = document.createElement("small");
-    small.className = "error-msg";'
+    small.className = "error-msg";
     small.textContent = message;
     
-    small.style.color = "red"
+    small.style.color = "red";
     small.style.fontSize = "14px";
     small.style.display = "block";
     small.style.marginTop = "4px";
@@ -65,16 +67,18 @@ function showError(inputElement, message) {
         label.insertBefore(small, inputElement.nextSibling);
     }   else {
         label.appendChild(small);
-    }inputElement.style.border
-
-"1px solid red";
-
-alignErrorMessage(small, inputElement);
+    }
+    
+    inputElement.style.border = "1px solid red";
+    
+    alignErrorMessage(small, inputElement);
+}
 
 function alignErrorMessage(smaLLEL, inputEL) {
     const isMobile = window.matchMedia("(max-width: 600px)").matches;
     if (isMobile) {
-        smalLEL.style.marginLe .marginLeft = "0"; smalLEL.style.width = "100%";
+        smalLEL.style.marginLe .marginLeft = "0";
+        smalLEL.style.width = "100%";
         return;
     }
 
@@ -84,7 +88,7 @@ function alignErrorMessage(smaLLEL, inputEL) {
     const rectInput = inputEl.getBoundingClientRect();
     const offsetLeft = Math.max(0, Math.round(rectInput.left - rectLabel.left));
         
-        smaLLEL.style.marginLeft = offsetLeft + "px";
+        smaLLEL.style.marginLeft = offsetLeft - "px";
         smaLLEL.style.width = Math.round(rectInput.width) + "px";
 }
 
@@ -103,11 +107,11 @@ window.addEventListener("resize", () => {
                 const label = document.querySelector('label[for="txtPesan"]');
                 if (!label) return;
             
-            Let wrapper = label.querySelector('[data-wrapper="pesan-wrapper"]');
+            let wrapper = label.querySelector('[data-wrapper="pesan-wrapper"]');
             const span = label.querySelector('span');
             const textarea = document.getElementById('txtPesan');
             const counter = document.getElementById('charCount');
-            if (!span || !textarea !counter) return;
+            if (!span || !textarea || !counter) return;
             
             if (!wrapper) {
                 wrapper = document.createElement('div');
@@ -173,16 +177,15 @@ window.addEventListener("resize", () => {
                 wrapper.style.display = 'flex';
                 wrapper.style.flexDirection = 'column';
                 counter.style.alignSelf = 'flex-end';
-                counter.style.width ith = 'auto';
+                counter.style.widthM= 'auto';
             }
         }
         
         setupCharCountLayout();
         
-        window.addEventListener('resize', applyResponsiveLayout)
+        window.addEventListener('resize', applyResponsiveLayout);
             
             document.getElementById("txtPesan").addEventListener("input", function () {
                 const panjang = this.value.length;
                 document.getElementById("charCount").textContent = panjang + "/200 karakter";
-
-});
+            });

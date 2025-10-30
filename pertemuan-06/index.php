@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ini Header</h1>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+            &#9776;
+        </button>
+        <nav>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>selamat Datang</h2>
+            <p>Ini contoh paragraft HTML.</p>
+        </section>
+        <section id="about">
+            <h2>Tentang Saya</h2>
+            <p><strong>NIM:</strong> 2511500033</p>
+            <P><strong>Nama Lengkap:</strong> Nabila Saskia &#128526; &#128539;</P>
+            <p><strong>Tempat Lahir:</strong> Pangkalpinang</p>
+            <p><strong>Tanggal Lahir:</strong> 12 September 2007</p>
+            <p><strong>Hobi:</strong> Menari &#128131; &#128518;</p>
+            <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
+            <p><strong>Pekerjaan:</strong> Mahasiswa &copy; 2025</p>
+            <p><strong>Nama Orang Tua:</strong> Bapak Edi dan Ibu Juwita</p>
+            <p><strong>Nama Adik:</strong> Niwa Maretesa, Zenshen, Zen qin long</p>
+        </section>
+        <section id="contact">
+            <h2>Kontak Kami</h2>
+            <form action="" method="GET">
+                <label for="txtNama"><span>Nama:</span>
+                    <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required
+                        autocomplate="name">
+                </label>
+                <label for="txtEmail"><span>Email:</span>
+                    <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukan email" required
+                        autocomplate="email">
+                </label>
+                <label for="txtPesan"><span>Pesan Anda:</span>
+                    <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+                    <small id="charCount">0/200 karakter</small>
+                </label>
+                <button type="submit">Kirim</button>
+                <button type="reset">Batal</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <P>&COPY; 2025 Nabila Saskia [2511500033]</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
