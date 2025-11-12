@@ -62,7 +62,7 @@ header li a:active {
 #home,
 #about,
 #contact {
-  background-color: #00ff84;
+  background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
   max-width: 700px;
@@ -73,8 +73,8 @@ header li a:active {
 #home h2,
 #about h2,
 #contact h2 {
-  color: #ff026b;
-  border-bottom: 2px solid #319fff;
+  color: #003366;
+  border-bottom: 2px solid #003366;
   padding-bottom: 6px;
   margin-top: 0;
   margin-bottom: 16px;
@@ -91,7 +91,7 @@ header li a:active {
   align-items: baseline;
   margin: 0;
   padding: 6px 0;
-  border-bottom: 1px solid #ff0000;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 #about strong,
@@ -129,19 +129,19 @@ header li a:active {
 }
 
 #contact button[type="submit"] {
-  background-color: #850000;
+  background-color: #003366;
   color: #fff;
   font-weight: 600;
 }
 
 #contact button[type="reset"] {
-  background-color: #49ff18;
-  color: #fff;
+  background-color: #b4b4b4;
+  color: #272727;
   font-weight: 500;
 }
 
 #contact button[type="submit"]:hover {
-  background-color: #ff7b00;
+  background-color: #0379ee;
   transform: translateY(-1px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
