@@ -15,4 +15,5 @@ Hari ini, Rabu 06.Nov.2025 saya belajar:<br>
   <li>penghacur session</li>
   <li>kondisi pengecek isi session</li>
   <li>copy rename get.php dan get_proses.php ke post.php dan post_proses.php</li>
+  <li>mengubah action dan method untuk post.php</li>
 </ol>
