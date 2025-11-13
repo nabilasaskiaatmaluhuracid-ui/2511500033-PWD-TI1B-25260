@@ -13,4 +13,5 @@ Hari ini, Rabu 06.Nov.2025 saya belajar:<br>
   <li>ambil session di get.php</li>
   <li>menampilkan nilai session pada lokasi yang tepat</li>
   <li>penghacur session</li>
+  <li>kondisi pengecek isi session</li>
 </ol>

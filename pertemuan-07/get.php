@@ -1,7 +1,17 @@
 <?php
 session_start();
-$sesNama = $_SESSION["sesNama"];
-$sesEmail = $_SESSION["sesEmail"];
+
+$sesNama = "";
+if(isset($_SESSION["sesNama"])):  
+  $sesNama = $_SESSION["sesNama"];
+endif;
+
+
+$sesEmail = "";
+if(isset($_SESSION["sesEmail"])):  
+  $sesEmail = $_SESSION["sesEmail"];
+endif;
+
 $sesPesan = $_SESSION["sesPesan"];
 echo $sesNama.$sesEmail.$sesPesan;
 ?>
