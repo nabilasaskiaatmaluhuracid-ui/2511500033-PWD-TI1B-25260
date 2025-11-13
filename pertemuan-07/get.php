@@ -55,10 +55,15 @@ echo $sesNama.$sesEmail.$sesPesan;
       </p>
       <p><strong>Nama Lengkap:</strong>
         <?php
-        echo $Nama;
+        echo $sesNama;
         ?> &#128526;
       </p>
-      <p><strong>Tempat Lahir:</strong> Pangkalpinang</p>
+      <p>
+        <strong>Email:</strong>
+        <?php
+        echo $sesEmail;
+        ?>
+      </p>
       <p><strong>Tanggal Lahir:</strong> 1 Januari 2000</p>
       <p><strong>Hobi:</strong> Memasak, coding, dan bermain musik &#127926;</p>
       <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
