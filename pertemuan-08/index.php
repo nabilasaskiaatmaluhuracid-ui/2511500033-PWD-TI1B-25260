@@ -53,7 +53,7 @@ endif;
     </section>
 
     <section id="entry-data-mahasiswa">
-        <h2>Entry Data Mahasiswa</h2>
+        <h2>entry Data Mahasiswa</h2>
         <form id="form-mahasiswa" action="" method="POST">
             <div>
                 <label for="nim">NIM:</label>
@@ -119,11 +119,11 @@ endif;
 
     <section id="about">
       <?php
-      $nim = 2511500010;
-      $NIM = '0344300002';
-      $nama = "Say'yid Abdullah";
-      $Nama = 'Al\'kautar Benyamin';
-      $tempat = "Jebus";
+      $nim = 2511500033;
+      $NIM = '2511500033';
+      $nama = "Nabila Saskia";
+      $Nama = 'Nabila Saskia';
+      $tempat = "Pangkalpinang";
       ?>
       <h2>Tentang Saya</h2>
       <p><strong>NIM:</strong>

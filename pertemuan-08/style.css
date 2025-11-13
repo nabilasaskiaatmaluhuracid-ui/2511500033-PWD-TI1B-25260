@@ -51,7 +51,8 @@ header li a:active {
 
 #home:target~header nav a[href="#home"],
 #about:target~header nav a[href="#about"],
-#contact:target~header nav a[href="#contact"] {
+#contact:target~header nav a[href="#contact"]
+#entry-data-mahasiswa:target~header nav a[href="#entry-data-mahasiswa"] {
   background: #fff;
   color: #003366;
   font-weight: bold;
@@ -61,7 +62,8 @@ header li a:active {
 
 #home,
 #about,
-#contact {
+#contact,
+#entry-data-mahasiswa {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
@@ -72,7 +74,8 @@ header li a:active {
 
 #home h2,
 #about h2,
-#contact h2 {
+#contact h2,
+#entry-data-mahasiswa h2 {
   color: #003366;
   border-bottom: 2px solid #003366;
   padding-bottom: 6px;
@@ -85,7 +88,8 @@ header li a:active {
 }
 
 #about p,
-#contact label {
+#contact label,
+#entry-data-mahasiswa label {
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
@@ -95,7 +99,8 @@ header li a:active {
 }
 
 #about strong,
-#contact label>span {
+#contact label>span,
+#entry-data-mahasiswa label>span {
   min-width: 180px;
   color: #003366;
   font-weight: 600;
@@ -105,7 +110,8 @@ header li a:active {
 }
 
 #contact input,
-#contact textarea {
+#contact textarea,
+#entry-data-mahasiswa textarea {
   flex: 1;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -116,7 +122,8 @@ header li a:active {
   box-sizing: border-box;
 }
 
-#contact button {
+#contact button,
+#entry-data-mahasiswa button {
   margin-top: 10px;
   display: inline-block;
   padding: 10px 24px;
@@ -128,25 +135,29 @@ header li a:active {
   margin-right: 8px;
 }
 
-#contact button[type="submit"] {
+#contact button[type="submit"]
+#entry-data-mahasiswa button[type="submit"{
   background-color: #003366;
   color: #fff;
   font-weight: 600;
 }
 
-#contact button[type="reset"] {
+#contact button[type="reset"]
+#entry-data-mahasiswa button[type="reset"] {
   background-color: #b4b4b4;
   color: #272727;
   font-weight: 500;
 }
 
-#contact button[type="submit"]:hover {
+#contact button[type="submit"]:hover
+#entry-data-mahasiswa button[type="submit"]:hover {
   background-color: #0379ee;
   transform: translateY(-1px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-#contact button[type="reset"]:hover {
+#contact button[type="reset"]:hover
+#entry-data-mahasiswa button[type="reset"]:hover {
   background-color: #cccccc;
   transform: translateY(-1px);
 }
@@ -216,13 +227,15 @@ footer {
   }
 
   #about p,
-  #contact label {
+  #contact label,
+  #entry-data-mahasiswa label {
     flex-direction: column;
     align-items: flex-start;
   }
 
   #about strong,
-  #contact label>span {
+  #contact label>span,
+  #entry-data-mahasiswa label>span {
     text-align: left;
     padding-right: 0;
     margin-bottom: 2px;
@@ -230,137 +243,10 @@ footer {
 
   #contact input,
   #contact textarea,
-  #contact button {
+  #contact button,
+  #entry-data-mahasiswa input,
+  #entry-data-mahasiswa textarea,
+  #entry-data-mahasiswa button {
     width: 100%;
   }
 }
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entry Data Mahasiswa</title>
-    <style>
-        /* Style untuk section Entry Data Mahasiswa */
-        #entry-data-mahasiswa {
-          background-color: #f9f9f9; /* Warna latar belakang */
-          padding: 20px; /* Ruang di dalam section */
-          margin-top: 30px; /* Jarak dari elemen di atasnya */
-          border-radius: 5px; /* Membuat sudut sedikit membulat */
-        }
-
-        /* Style untuk heading di dalam section Entry Data Mahasiswa */
-        #entry-data-mahasiswa h2 {
-          color: #333; /* Warna teks heading */
-          font-size: 24px; /* Ukuran font heading */
-          margin-bottom: 15px; /* Jarak di bawah heading */
-        }
-
-        /* Style untuk label form */
-        #entry-data-mahasiswa label {
-          display: block; /* Membuat label menjadi blok */
-          margin-bottom: 5px; /* Jarak di bawah label */
-          font-weight: bold; /* Membuat teks label tebal */
-        }
-
-        /* Style untuk input dan textarea */
-        #entry-data-mahasiswa input[type="text"],
-        #entry-data-mahasiswa input[type="email"],
-        #entry-data-mahasiswa input[type="date"],
-        #entry-data-mahasiswa textarea {
-          width: 100%; /* Lebar input 100% dari parent */
-          padding: 8px; /* Ruang di dalam input */
-          margin-bottom: 15px; /* Jarak di bawah input */
-          border: 1px solid #ccc; /* Garis tepi input */
-          border-radius: 4px; /* Membuat sudut input membulat */
-          box-sizing: border-box; /* Memastikan padding dan border tidak menambah lebar total */
-        }
-
-        /* Style untuk textarea */
-        #entry-data-mahasiswa textarea {
-          height: 150px; /* Tinggi textarea */
-        }
-
-        /* Style untuk tombol */
-        #entry-data-mahasiswa button {
-          background-color: #4CAF50; /* Warna latar belakang tombol */
-          color: white; /* Warna teks tombol */
-          padding: 10px 20px; /* Ruang di dalam tombol */
-          border: none; /* Menghilangkan garis tepi */
-          border-radius: 4px; /* Membuat sudut tombol membulat */
-          cursor: pointer; /* Mengubah cursor menjadi pointer saat dihover */
-        }
-
-        /* Style untuk tombol saat dihover */
-        #entry-data-mahasiswa button:hover {
-          background-color: #3e8e41; /* Warna latar belakang tombol saat dihover */
-        }
-    </style>
-</head>
-<body>
-
-    <section id="entry-data-mahasiswa">
-        <h2>Entry Data Mahasiswa</h2>
-        <form id="form-mahasiswa" action="" method="POST">
-            <div>
-                <label for="nim">NIM:</label>
-                <input type="text" id="nim" name="nim" required>
-            </div>
-            <div>
-                <label for="nama_lengkap">Nama Lengkap:</label>
-                <input type="text" id="nama_lengkap" name="nama_lengkap" required>
-            </div>
-            <div>
-                <label for="tempat_lahir">Tempat Lahir:</label>
-                <input type="text" id="tempat_lahir" name="tempat_lahir">
-            </div>
-            <div>
-                <label for="tanggal_lahir">Tanggal Lahir:</label>
-                <input type="date" id="tanggal_lahir" name="tanggal_lahir">
-            </div>
-            <div>
-                <label for="hobi">Hobi:</label>
-                <input type="text" id="hobi" name="hobi">
-            </div>
-            <div>
-                <label for="pasangan">Pasangan:</label>
-                <input type="text" id="pasangan" name="pasangan">
-            </div>
-            <div>
-                <label for="pekerjaan">Pekerjaan:</label>
-                <input type="text" id="pekerjaan" name="pekerjaan">
-            </div>
-            <div>
-                <label for="nama_orang_tua">Nama Orang Tua:</label>
-                <input type="text" id="nama_orang_tua" name="nama_orang_tua">
-            </div>
-            <div>
-                <label for="nama_kakak">Nama Kakak:</label>
-                <input type="text" id="nama_kakak" name="nama_kakak">
-            </div>
-            <div>
-                <label for="nama_adik">Nama Adik:</label>
-                <input type="text" id="nama_adik" name="nama_adik">
-            </div>
-            <div>
-                <button type="submit" name="submit">Kirim</button>
-                <button type="reset">Batal</button>
-            </div>
-        </form>
-    </section>
-
-    <section id="about">
-        <h2>Tentang Saya</h2>
-        <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
-            $nim = isset($_POST["nim"]) ? htmlspecialchars($_POST["nim"]) : "";
-            echo "<p>NIM: " . $nim . "</p>";
-        } else {
-            echo "<p>NIM: Belum ada data</p>";
-        }
-        ?>
-    </section>
-
-</body>
-</html>
