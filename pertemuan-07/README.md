@@ -10,4 +10,5 @@ Hari ini, Rabu 06.Nov.2025 saya belajar:<br>
   <li>echo $_GET</li>
   <li>mengganti echo $_GET menjadi $_SESSION</li>
   <li>menggunakan header('location:  get.php')</li>
+  <li>ambil session di get.php</li>
 </ol>

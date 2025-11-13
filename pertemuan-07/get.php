@@ -1,4 +1,10 @@
-
+<?php
+session_start();
+$sesNama = $_SESSION["sesNama"];
+$sesEmail = $_SESSION["sesEmail"];
+$sesPesan = $_SESSION["sesPesan"];
+echo $sesNama.$sesEmail.$sesPesan;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
