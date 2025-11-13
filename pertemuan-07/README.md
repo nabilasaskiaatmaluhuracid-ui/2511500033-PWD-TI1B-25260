@@ -12,4 +12,5 @@ Hari ini, Rabu 06.Nov.2025 saya belajar:<br>
   <li>menggunakan header('location:  get.php')</li>
   <li>ambil session di get.php</li>
   <li>menampilkan nilai session pada lokasi yang tepat</li>
+  <li>penghacur session</li>
 </ol>

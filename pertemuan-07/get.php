@@ -64,6 +64,12 @@ echo $sesNama.$sesEmail.$sesPesan;
         echo $sesEmail;
         ?>
       </p>
+      <p>
+        <strong>Pesan:</strong>
+        <?php
+        echo $sesPesan;
+        ?>
+      </p>
       <p><strong>Tanggal Lahir:</strong> 1 Januari 2000</p>
       <p><strong>Hobi:</strong> Memasak, coding, dan bermain musik &#127926;</p>
       <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
