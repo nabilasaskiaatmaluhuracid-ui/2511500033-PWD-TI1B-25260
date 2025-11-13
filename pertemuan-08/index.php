@@ -53,54 +53,69 @@ endif;
     </section>
 
     <section id="entry-data-mahasiswa">
-  <h2>Entry Data Mahasiswa</h2>
-  <form id="form-mahasiswa">
-    <div>
-      <label for="nim">NIM:</label>
-      <input type="text" id="nim" name="nim" required>
-    </div>
-    <div>
-      <label for="nama_lengkap">Nama Lengkap:</label>
-      <input type="text" id="nama_lengkap" name="nama_lengkap" required>
-    </div>
-    <div>
-      <label for="tempat_lahir">Tempat Lahir:</label>
-      <input type="text" id="tempat_lahir" name="tempat_lahir">
-    </div>
-    <div>
-      <label for="tanggal_lahir">Tanggal Lahir:</label>
-      <input type="date" id="tanggal_lahir" name="tanggal_lahir">
-    </div>
-    <div>
-      <label for="hobi">Hobi:</label>
-      <input type="text" id="hobi" name="hobi">
-    </div>
-    <div>
-      <label for="pasangan">Pasangan:</label>
-      <input type="text" id="pasangan" name="pasangan">
-    </div>
-    <div>
-      <label for="pekerjaan">Pekerjaan:</label>
-      <input type="text" id="pekerjaan" name="pekerjaan">
-    </div>
-    <div>
-      <label for="nama_orang_tua">Nama Orang Tua:</label>
-      <input type="text" id="nama_orang_tua" name="nama_orang_tua">
-    </div>
-    <div>
-      <label for="nama_kakak">Nama Kakak:</label>
-      <input type="text" id="nama_kakak" name="nama_kakak">
-    </div>
-    <div>
-      <label for="nama_adik">Nama Adik:</label>
-      <input type="text" id="nama_adik" name="nama_adik">
-    </div>
-    <div>
-      <button type="submit">Kirim</button>
-      <button type="reset">Batal</button>
-    </div>
-  </form>
-</section>
+        <h2>Entry Data Mahasiswa</h2>
+        <form id="form-mahasiswa" action="" method="POST">
+            <div>
+                <label for="nim">NIM:</label>
+                <input type="text" id="nim" name="nim" required>
+            </div>
+            <div>
+                <label for="nama_lengkap">Nama Lengkap:</label>
+                <input type="text" id="nama_lengkap" name="nama_lengkap" required>
+            </div>
+            <div>
+                <label for="tempat_lahir">Tempat Lahir:</label>
+                <input type="text" id="tempat_lahir" name="tempat_lahir">
+            </div>
+            <div>
+                <label for="tanggal_lahir">Tanggal Lahir:</label>
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir">
+            </div>
+            <div>
+                <label for="hobi">Hobi:</label>
+                <input type="text" id="hobi" name="hobi">
+            </div>
+            <div>
+                <label for="pasangan">Pasangan:</label>
+                <input type="text" id="pasangan" name="pasangan">
+            </div>
+            <div>
+                <label for="pekerjaan">Pekerjaan:</label>
+                <input type="text" id="pekerjaan" name="pekerjaan">
+            </div>
+            <div>
+                <label for="nama_orang_tua">Nama Orang Tua:</label>
+                <input type="text" id="nama_orang_tua" name="nama_orang_tua">
+            </div>
+            <div>
+                <label for="nama_kakak">Nama Kakak:</label>
+                <input type="text" id="nama_kakak" name="nama_kakak">
+            </div>
+            <div>
+                <label for="nama_adik">Nama Adik:</label>
+                <input type="text" id="nama_adik" name="nama_adik">
+            </div>
+            <div>
+                <button type="submit" name="submit">Kirim</button>
+                <button type="reset">Batal</button>
+            </div>
+        </form>
+    </section>
+
+    <section id="about">
+        <h2>Tentang Saya</h2>
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
+            $nim = isset($_POST["nim"]) ? htmlspecialchars($_POST["nim"]) : "";
+            echo "<p>NIM: " . $nim . "</p>";
+        } else {
+            echo "<p>NIM: Belum ada data</p>";
+        }
+        ?>
+    </section>
+
+</body>
+</html>
 
     <section id="about">
       <?php
